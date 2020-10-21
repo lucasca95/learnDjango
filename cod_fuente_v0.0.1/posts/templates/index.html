@@ -1,0 +1,11 @@
+<h1>Listado</h1>
+{% if posts %}
+    <ul>
+    {%for p in posts%}
+        <li>
+            <h3>{{p.title}}</h3>
+            <a href="{% url 'posts:detail' p.id%}">{{p.content}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
